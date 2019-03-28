@@ -14,6 +14,7 @@ public class Main extends Application {
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("MainWindow.fxml"));
 			Scene scene = new Scene(root,700,600);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setTitle("Sequence Formatter");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {

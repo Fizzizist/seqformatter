@@ -52,38 +52,20 @@ public class Sequence{
     }
 
     /**
-     * Getter for total sequence length
+     * Get Total number of base pairs in the sequence
      * 
-     * @return length of the sequence as a String
+     * @return integer representing the total number of base-pairs
      */
-    public String getTotalSeqLen() {
-    	Integer len = sequence.length();
-    	return len.toString();
+    public int getTotalBP() {
+    	return sequence.length();
     }
-
+    
     /**
-     * Setter for setting the sequence string
+     * Setter for setting the sequence string and remove all whitespace and digits
      * 
      * @param seq - string to set the new sequence
      */
     public void setSeq(String seq){
-        sequence = seq;
+        sequence = seq.replaceAll("\\s+", "").replaceAll("\\d+", "");
     }
-
-    /**
-     * Function for formatting the string into the line lengths
-     * specified in the Chars per line field
-     * 
-     * @param lineLength - string containing charsPerLine content
-     */
-    public void formatLineLength(String lineLength) {
-    	int intLength = 60;
-    	try {
-    		intLength = Integer.parseInt(lineLength);
-    	} catch (NumberFormatException e) {
-    		System.out.println("A number was not input.");
-    	}
-    	
-    }
-
 }
