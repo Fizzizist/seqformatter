@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700" prefWidth="726.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="seqformat.MainWindowController">
+   <children>
+      <MenuBar AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.2651821862348178" layoutX="307.0" layoutY="162.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.7230769230769231" layoutX="291.0" layoutY="11.0" prefHeight="182.0" prefWidth="847.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Text layoutX="14.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chars per line: " />
+                              <TextField fx:id="charsPerLine" layoutX="131.0" layoutY="9.0" prefHeight="25.0" prefWidth="35.0" text="60" />
+                              <Button fx:id="upperLower" layoutX="199.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#changeCase" prefHeight="25.0" prefWidth="181.0" text="uppercase/lowercase" />
+                              <Button layoutX="199.0" layoutY="43.0" mnemonicParsing="false" text="show/hide base numbers" />
+                              <Text fx:id="aPerc" layoutX="14.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%A: " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+                              <Text fx:id="gPerc" layoutX="80.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%G: " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="60.0" />
+                              <Text fx:id="cPerc" layoutX="149.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%C: " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="120.0" />
+                              <Text fx:id="tPerc" layoutX="208.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%T: " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" />
+                              <Text fx:id="totSeqLen" layoutX="275.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Sequence Length: " AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="240.0" />
+                              <Button layoutX="13.0" layoutY="43.0" mnemonicParsing="false" text="Insert/Remove Spaces" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Save settings" />
+                              <Button layoutX="14.0" layoutY="52.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" text="Load settings..." />
+                              <Button layoutX="14.0" layoutY="90.0" mnemonicParsing="false" text="Restore Defaults" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextArea fx:id="mainText" layoutX="238.0" layoutY="51.0" prefHeight="359.0" prefWidth="847.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
