@@ -97,7 +97,13 @@ public class MainWindowController implements Initializable {
     	//add spaces if necessary
     	if(spaces) {
     		for(String i : sections) {
-    			
+    			if(i.length() > 10) {
+	    			String withSpaces = i.substring(0,10);
+	    			for(int j=10; j<i.length();j += 10) {
+	    				withSpaces = (withSpaces + " " + i.substring(j,j+10));
+	    			}
+	    			i = withSpaces;
+    			}
     		}
     	}
     	
